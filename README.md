@@ -36,15 +36,6 @@ It reads:
 ````
 at the moment. Change the values after the "=" symbol to the actual links to the files.
 
-# Usage:
-
-Use
-`
-    python diverseClust.py --help
-`
-
-To get help page
-
 # example:
 Run
 `````
@@ -58,3 +49,28 @@ The expected output is:
     Running MCL to obtain clusters in examples/examples.fa.mcl
     Final outputs are saved in examples/examples.fa.diverseClust
 `````
+
+# Usage:
+
+Use
+`
+    python diverseClust.py --help
+`
+
+To get help page
+````
+Usage: diverseClust.py [OPTIONS]
+
+Options:
+  -q, --query TEXT       amino acid sequences to be clustered. Multi-FASTA
+                         format. REQUIRED.  [required]
+  -p, --prefix TEXT      Prefix of outputs. [DEFAULT: same as query name]
+  -i, --min_id FLOAT     Minimal accepted identity in BLASTp [DEFAULT: 0.3]
+  -c, --min_cov FLOAT    Minimal alignment covereage to the smaller sequence
+                         in BLASTp [DEFAULT: 0.8]
+  --min_cov2 FLOAT       Minimal alignment covereage to the larger sequence in
+                         BLASTp [DEFAULT: 0.2]
+  -I, --inflation FLOAT  Inflation factor for MCL. [DEFAULT: 2.0]
+  --help                 Show this message and exit.
+````
+
