@@ -33,14 +33,14 @@ To get help page
 
 # example:
 Run
-`
+`````
     python diverseClust.py -q examples/examples.fa
-`
+`````
 The expected output is:
-`
+`````
     Pre-clustering using usearch. Results in examples/examples.fa.repr and examples/examples.fa.uc
     Running BLASTp to generate examples/examples.fa.bsp
     Parsing BLASTp results into examples/examples.fa.abc
     Running MCL to obtain clusters in examples/examples.fa.mcl
     Final outputs are saved in examples/examples.fa.diverseClust
-`
+`````
