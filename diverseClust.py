@@ -21,7 +21,7 @@ def precluster(prefix, query) :
 def runBlastp(prefix) :
     sys.stdout.write('Running BLASTp to generate {0}.bsp\n'.format(prefix))
     subprocess.Popen('{makeblastdb} -in {0}.repr -dbtype prot'.format(prefix, **config).split(), stdout=subprocess.PIPE).wait()
-    subprocess.Popen('{blastp} -task blastp-short -db {0}.repr -query {0}.repr -out {0}.bsp -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue score qlen slen" -evalue 0.1 -num_threads 10'.format(prefix, **config), shell=True).wait()
+    subprocess.Popen('{blastp} -task blastp-short -max_target_seqs 10000 -db {0}.repr -query {0}.repr -out {0}.bsp -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue score qlen slen" -evalue 0.1 -num_threads 10'.format(prefix, **config), shell=True).wait()
     
 # convert blastp to links
 def parseBlast(prefix, min_id, min_cov, min_cov2) :
