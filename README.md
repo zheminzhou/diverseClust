@@ -17,10 +17,10 @@ A simple script that can efficiently cluster divergent amino acid sequences base
 
 ncbi-blast and mcl can also be installed using apt-get in ubuntu by:
 
-`
+````
     sudo apt-get update
     sudo apt-get install ncbi-blast+ mcl
-`
+````
 
 # Usage:
 
