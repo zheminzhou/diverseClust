@@ -2,18 +2,18 @@
 A simple script that can efficiently cluster divergent amino acid sequences based on the coverage of their alignments
 
 # Requirements
-* Python >= 3.5
+1. Python >= 3.5
 
-* Install required Python packages
-`
+2. Install required Python packages
+````
     pip install -r requirment.txt
-`
+````
 
-* Install and link required 3rd party packages
+3. Install required 3rd party packages
 
-1. ncbi-blast: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
-2. mcl: https://github.com/JohannesBuchner/mcl
-3. usearch: http://www.drive5.com/usearch/download.html (32-bit version is free for individual use)
+* ncbi-blast: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+* mcl: https://github.com/JohannesBuchner/mcl
+* usearch: http://www.drive5.com/usearch/download.html (32-bit version is free for individual use)
 
 ncbi-blast and mcl can also be installed using apt-get in ubuntu by:
 
@@ -21,6 +21,20 @@ ncbi-blast and mcl can also be installed using apt-get in ubuntu by:
     sudo apt-get update
     sudo apt-get install ncbi-blast+ mcl
 ````
+
+
+
+4. Modify "diverseClust.ini" to link installed executable files. 
+
+It reads:
+````
+   [params]
+   usearch = /home/zhemin/software/usearch11.0.667_i86linux32
+   makeblastdb = makeblastdb
+   blastp = blastp
+   mcl = mcl
+````
+at the moment. Change the values after the "=" symbol to the actual links to the files.
 
 # Usage:
 
