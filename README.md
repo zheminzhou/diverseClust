@@ -1,8 +1,8 @@
 # diverseClust
-A simple script that can efficiently cluster divergent amino acid sequences based on the coverage of their alignments
+A simple script that can efficiently group divergent amino acid sequences into clusters based on the coverage of their alignments
 
 # Requirements
-1. Python >= 3.5
+1. **Python >= 3.5**
 
 2. Install required Python packages
 ````
@@ -11,11 +11,11 @@ A simple script that can efficiently cluster divergent amino acid sequences base
 
 3. Install required 3rd party packages
 
-* ncbi-blast: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
-* mcl: https://github.com/JohannesBuchner/mcl
-* usearch: http://www.drive5.com/usearch/download.html (32-bit version is free for individual use)
+* **ncbi-blast**: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+* **mcl**: https://github.com/JohannesBuchner/mcl
+* **usearch**: http://www.drive5.com/usearch/download.html (*32-bit version is free for individual use*)
 
-ncbi-blast and mcl can also be installed using apt-get in ubuntu by:
+**ncbi-blast** and **mcl** can also be installed using `apt-get` in ubuntu by:
 
 ````
     sudo apt-get update
@@ -24,7 +24,7 @@ ncbi-blast and mcl can also be installed using apt-get in ubuntu by:
 
 
 
-4. Modify "diverseClust.ini" to link installed executable files. 
+4. Modify **"diverseClust.ini"** to link installed executable files. 
 
 It reads:
 ````
@@ -34,7 +34,7 @@ It reads:
    blastp = blastp
    mcl = mcl
 ````
-at the moment. Change the values after the "=" symbol to the actual links to the files.
+at the moment. Change the values after the **"="** symbols to the actual links to the files.
 
 # example:
 Run
@@ -57,7 +57,7 @@ Use
     python diverseClust.py --help
 `
 
-To get help page
+To get **help page**
 ````
 Usage: diverseClust.py [OPTIONS]
 
