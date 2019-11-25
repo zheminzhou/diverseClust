@@ -15,7 +15,7 @@ config = dict(config['params'])
 # run usearch for preclustering 99%
 def precluster(prefix, query) :
     sys.stdout.write('Pre-clustering using usearch. Results in {0}.repr and {0}.uc\n'.format(prefix))
-    subprocess.Popen('{usearch} -cluster_fast {0} -id 0.99 -centroids {1}.repr -uc {1}.uc'.format(query, prefix, **config).split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE).wait()
+    subprocess.Popen('{usearch} -cluster_fast {0} -query_cov 0.99 -target_cov 0.99 -leftjust -rightjust -id 0.99 -centroids {1}.repr -uc {1}.uc'.format(query, prefix, **config).split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE).wait()
     
 # run blastp to get pairwise matrix
 def runBlastp(prefix) :
